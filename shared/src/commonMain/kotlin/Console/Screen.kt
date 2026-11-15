@@ -14,4 +14,14 @@ class Screen {
     }
 
     fun getPixel(x: Int, y: Int): Int = pixels[y * SCREEN_SIZE + x].toInt()
+
+    fun fillRect(x: Int, y: Int, w: Int, h: Int, color: Int) {
+        for (j in y until y + h) {
+            for (i in x until x + w) {
+                setPixel(i, j, color)
+            }
+        }
+    }
+
 }
+
